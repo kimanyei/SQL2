@@ -1,6 +1,16 @@
-
-
 --assesing Hotel Revenue Trends
+select * from dbo.['2018$']
+
+select * from dbo.['2019$']
+
+select * from dbo.['2020$']
+
+--merging the tables
+select * from dbo.['2018$']
+union
+select * from dbo.['2019$']
+union
+select * from dbo.['2020$']
 
 with hotels as (
 select * from dbo.['2018$']
@@ -29,17 +39,4 @@ from hotels
 Group by arrival_date_year,hotel
 
 
-select * from dbo.['2018$']
-
-select * from dbo.['2019$']
-
-select * from dbo.['2020$']
-
-
---merging the tables
-select * from dbo.['2018$']
-union
-select * from dbo.['2019$']
-union
-select * from dbo.['2020$']
 
